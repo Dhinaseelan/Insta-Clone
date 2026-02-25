@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "userImage": "https://i.pravatar.cc/150?u=johndoe",
+      "postImage": "https://picsum.photos/seed/post1/600/600",
+      "likes": 124,
+      "caption": "Beautiful sunset today! #nature #sunset",
+      "timestamp": "2024-03-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "username": "janedoe",
+      "userImage": "https://i.pravatar.cc/150?u=janedoe",
+      "postImage": "https://picsum.photos/seed/post2/600/600",
+      "likes": 89,
+      "caption": "Exploring the city streets. #urban #explore",
+      "timestamp": "2024-03-20T11:30:00Z"
+    },
+    {
+      "id": 3,
+      "username": "traveler_pro",
+      "userImage": "https://i.pravatar.cc/150?u=traveler_pro",
+      "postImage": "https://picsum.photos/seed/post3/600/600",
+      "likes": 450,
+      "caption": "Missing these mountain views. #mountains #throwback",
+      "timestamp": "2024-03-19T15:45:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "fullName": "John Doe",
+      "avatar": "https://i.pravatar.cc/150?u=johndoe"
+    },
+    {
+      "id": 2,
+      "username": "janedoe",
+      "fullName": "Jane Doe",
+      "avatar": "https://i.pravatar.cc/150?u=janedoe"
+    }
+  ],
+  "profile": {
+    "username": "current_user",
+    "fullName": "New User",
+    "avatar": "https://i.pravatar.cc/150?u=current_user",
+    "postsCount": 0,
+    "followers": 150,
+    "following": 200,
+    "bio": "Coding my way through life 🚀"
+  }
+}
