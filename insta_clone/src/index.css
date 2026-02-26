@@ -18,3 +18,15 @@
 .bi {
   margin-right: 10px;
 }
+/* stories */
+.shight{
+    height: 70px;
+}
+.rounded-circle{
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;;
+}
+.hh{
+  height: 500px;
+}
