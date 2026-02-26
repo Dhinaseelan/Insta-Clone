@@ -1,6 +1,6 @@
 import Menu from "./Menu";
 import Feed from "./assets/Feed";
-
+import Sug from "./assets/Sug";
 function App() {
   return (
     <>
@@ -11,7 +11,9 @@ function App() {
         <div className="w-50  ">
           <Feed />
         </div>
-        <div className="w-30">suggestions</div>
+        <div className="w-30">
+          <Sug />
+        </div>
       </div>
     </>
   );

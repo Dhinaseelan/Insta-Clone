@@ -67,5 +67,39 @@
       ],
       "createdAt": "2026-02-25T16:45:00Z"
     }
+  ],
+  "profile":[
+    {
+      "id":1,
+      "username":"english_selvan",
+      "profilePic":"src/assets/images/profle1.png"
+    }
+  ],
+  "suggestions":[
+    {
+      "id":1,
+      "username":"english_selvan",
+      "profilePic":"src/assets/images/profle1.png"
+    },
+    {
+      "id":2,
+      "username":"english_selvan",
+      "profilePic":"src/assets/images/profle1.png"
+    },
+    {
+      "id":3,
+      "username":"english_selvan",
+      "profilePic":"src/assets/images/profle1.png"
+    },
+    {
+      "id":4,
+      "username":"english_selvan",
+      "profilePic":"src/assets/images/profle1.png"
+    },
+    {
+      "id":5,
+      "username":"english_selvan",
+      "profilePic":"src/assets/images/profle1.png"
+    }
   ]
 }
