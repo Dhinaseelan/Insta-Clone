@@ -30,3 +30,12 @@
 .hh{
   height: 500px;
 }
+.suggestion{
+  width: 80%;
+}
+.suggestion h5{
+  font-size: 17px;
+}
+.font-size-small{
+  font-size: 17px;
+}
