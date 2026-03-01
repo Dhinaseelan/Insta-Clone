@@ -101,5 +101,74 @@
       "username":"english_selvan",
       "profilePic":"src/assets/images/profle1.png"
     }
+  ],
+  "Story": [
+    {
+      "id": 1,
+      "user": {
+        "id": 101,
+        "username": "english_selvan",
+        "profilePic": "src/assets/images/profle1.png"
+      },
+      "imageUrl": "/images/s1.png",
+      "caption": "Exploring the streets of Chennai 🚶‍♂️✨",
+      "likes": 145,
+      "comments": [
+        {
+          "id": 201,
+          "user": "arun",
+          "text": "Looks amazing!"
+        },
+        {
+          "id": 202,
+          "user": "meena",
+          "text": "Take me there next time!"
+        }
+      ],
+      "createdAt": "2026-02-23T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "user": {
+        "id": 102,
+        "username": "meera_1",
+        "profilePic": "src/assets/images/profle2.png"
+      },
+      "imageUrl": "/images/s2.png",
+      "caption": "Late-night coding session 💻☕",
+      "likes": 98,
+      "comments": [
+        {
+          "id": 203,
+          "user": "kathiravan",
+          "text": "Keep grinding bro!"
+        }
+      ],
+      "createdAt": "2026-02-24T22:15:00Z"
+    },
+    {
+      "id": 3,
+      "user": {
+        "id": 103,
+        "username": "arun_kumar",
+        "profilePic": "src/assets/images/profile3.png"
+      },
+      "imageUrl": "/images/s3.png",
+      "caption": "Beach day with friends 🌊🌴",
+      "likes": 210,
+      "comments": [
+        {
+          "id": 204,
+          "user": "meera",
+          "text": "Perfect weather!"
+        },
+        {
+          "id": 205,
+          "user": "kathiravan",
+          "text": "Wish I was there!"
+        }
+      ],
+      "createdAt": "2026-02-25T16:45:00Z"
+    }
   ]
 }

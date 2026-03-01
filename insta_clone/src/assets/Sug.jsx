@@ -21,7 +21,7 @@ const Sug = () => {
 
   return (
     <div>
-      <div className="suggestion m-4 position-fixed">
+      <div className="suggestion m-4 ">
         {profile && (
           <div className="d-flex mt-2">
             <img
