@@ -55,3 +55,6 @@
 .story{
   padding: 10px;
 }
+.menus{
+  cursor: pointer;
+}

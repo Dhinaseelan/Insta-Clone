@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from 'react-router-dom'
 function Menu() {
+  const navigate=useNavigate();
   return (
     <div className="m-4">
       <div className="d-flex position-fixed flex-column gap-3">
@@ -30,7 +31,7 @@ function Menu() {
         <div>
           <i className="bi bi-plus-square"></i>Create
         </div>
-        <div>
+        <div onClick={()=>{navigate('/profile')}} className="menus" >
           <i className="bi bi-person"></i>Profile
         </div>
       </div>
