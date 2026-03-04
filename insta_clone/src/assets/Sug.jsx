@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Sug = () => {
@@ -5,12 +6,12 @@ const Sug = () => {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/suggestions")
+    fetch("http://localhost:3001/suggestions")
       .then((res) => res.json())
       .then((data) => setSuggestions(data))
       .catch((err) => console.log(err));
 
-    fetch("http://localhost:3000/profile")
+    fetch("http://localhost:3001/profile")
       .then((res) => res.json())
       .then((data) => {
         console.log("Profile data:", data);
@@ -18,7 +19,9 @@ const Sug = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
+  async function follow(id,username) {
+    axios.post('http://localhost:3001/followers',{"id":id,"username":username}).then(alert("followed")).catch(err=>console.log(err))
+  }
   return (
     <div>
       <div className="suggestion m-4 ">
@@ -48,7 +51,7 @@ const Sug = () => {
                     alt=""
                   />
                   <h6 className="font-size-small">{suggestion.username}</h6>
-                  <small className="ms-auto text-primary">follow</small>
+                  <a className="text-primary ms-auto text-decoration-none cursor-pointer" onClick={()=>follow(suggestion.id,suggestion.username)}>follow</a>
                 </div>
               </div>
             ))}

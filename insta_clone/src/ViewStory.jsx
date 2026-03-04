@@ -15,19 +15,39 @@ function ViewStory() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (storyId < 1 || storyId > total) {
-      navigate("/", { replace: true });
-      return;
-    }
+  console.log("Params from URL:", { id, tot });
+  console.log("Parsed values:", { storyId, total });
 
-    fetch("http://localhost:3000/Story")
-      .then((res) => res.json())
-      .then((data) => {
-        const found = data.find((item) => item.id === storyId);
-        setStory(found);
-      })
-      .catch((err) => console.error("Fetch error:", err));
-  }, [storyId, total, navigate]);
+  if (storyId < 1 || storyId > total) {
+    console.warn("Invalid storyId, redirecting...");
+    navigate("/", { replace: true });
+    return;
+  }
+
+  fetch("http://localhost:3001/Story")
+    .then((res) => {
+      console.log("Fetch response status:", res.status);
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Fetched data:", data);
+
+      // Ensure id comparison works even if backend sends strings
+      const found = data.find(
+        (item) => parseInt(item.id, 10) === storyId
+      );
+
+      if (!found) {
+        console.warn(`No story found with id=${storyId}`);
+      }
+
+      setStory(found);
+    })
+    .catch((err) => console.error("Fetch error:", err));
+}, [storyId, total, navigate]);
 
   const prevId = storyId - 1;
   const nextId = storyId + 1;
@@ -63,4 +83,4 @@ function ViewStory() {
   );
 }
 
-export default ViewStory;   // ✅ this line is required
+export default ViewStory; 

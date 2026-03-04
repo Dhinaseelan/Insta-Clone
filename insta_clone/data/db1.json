@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "user": {
         "id": 101,
         "username": "english_selvan",
@@ -25,7 +25,7 @@
       "createdAt": "2026-02-23T10:30:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "user": {
         "id": 102,
         "username": "meera_1",
@@ -44,7 +44,7 @@
       "createdAt": "2026-02-24T22:15:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "user": {
         "id": 103,
         "username": "arun_kumar",
@@ -68,43 +68,43 @@
       "createdAt": "2026-02-25T16:45:00Z"
     }
   ],
-  "profile":[
+  "profile": [
     {
-      "id":1,
-      "username":"english_selvan",
-      "profilePic":"src/assets/images/profle1.png"
+      "id": "1",
+      "username": "english",
+      "profilePic": "src/assets/images/profle1.png"
     }
   ],
-  "suggestions":[
+  "suggestions": [
     {
-      "id":1,
-      "username":"english_selvan",
-      "profilePic":"src/assets/images/profle1.png"
+      "id": "1",
+      "username": "english_selvan",
+      "profilePic": "src/assets/images/profle1.png"
     },
     {
-      "id":2,
-      "username":"english_selvan",
-      "profilePic":"src/assets/images/profle1.png"
+      "id": "2",
+      "username": "english_selvan",
+      "profilePic": "src/assets/images/profle1.png"
     },
     {
-      "id":3,
-      "username":"english_selvan",
-      "profilePic":"src/assets/images/profle1.png"
+      "id": "3",
+      "username": "english_selvan",
+      "profilePic": "src/assets/images/profle1.png"
     },
     {
-      "id":4,
-      "username":"english_selvan",
-      "profilePic":"src/assets/images/profle1.png"
+      "id": "4",
+      "username": "english_selvan",
+      "profilePic": "src/assets/images/profle1.png"
     },
     {
-      "id":5,
-      "username":"english_selvan",
-      "profilePic":"src/assets/images/profle1.png"
+      "id": "5",
+      "username": "english_selvan",
+      "profilePic": "src/assets/images/profle1.png"
     }
   ],
   "Story": [
     {
-      "id": 1,
+      "id": "1",
       "user": {
         "id": 101,
         "username": "english_selvan",
@@ -128,7 +128,7 @@
       "createdAt": "2026-02-23T10:30:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "user": {
         "id": 102,
         "username": "meera_1",
@@ -147,7 +147,7 @@
       "createdAt": "2026-02-24T22:15:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "user": {
         "id": 103,
         "username": "arun_kumar",
@@ -170,5 +170,6 @@
       ],
       "createdAt": "2026-02-25T16:45:00Z"
     }
-  ]
+  ],
+  "followers": []
 }
