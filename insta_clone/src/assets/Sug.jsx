@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "./Sug.css";
 
 const Sug = () => {
   const [profile, setProfile] = useState(null);
@@ -14,52 +15,59 @@ const Sug = () => {
     fetch("http://localhost:3001/profile")
       .then((res) => res.json())
       .then((data) => {
-        console.log("Profile data:", data);
         setProfile(data[0]);
       })
       .catch((err) => console.log(err));
   }, []);
-  async function follow(id,username) {
-    axios.post('http://localhost:3001/followers',{"id":id,"username":username}).then(alert("followed")).catch(err=>console.log(err))
+
+  async function follow(id, username) {
+    axios
+      .post("http://localhost:3001/followers", { id, username })
+      .then(() => alert("followed"))
+      .catch((err) => console.log(err));
   }
+
   return (
-    <div>
-      <div className="suggestion m-4 ">
-        {profile && (
-          <div className="d-flex mt-2">
-            <img
-              className="rounded-circle me-2"
-              src={profile.profilePic}
-              alt={profile.username || "profile"}
-            />
-            <h5>{profile.username}</h5>
-            <small className="ms-auto text-primary">switch</small>
-          </div>
-        )}
-        <div className="d-flex mt-2">
-          <small>Suggestions for you</small>
-          <b className="ms-auto text-primary">See all</b>
+    <div className="suggestion-container">
+      {profile && (
+        <div className="profile-header">
+          <img
+            className="profile-pic"
+            src={profile.profilePic}
+            alt={profile.username || "profile"}
+          />
+          <h5 className="profile-name">{profile.username}</h5>
+          <small className="switch-link">switch</small>
         </div>
-        {suggestions.length > 0 ? (
-          <div>
-            {suggestions.map((suggestion) => (
-              <div key={suggestion.id}>
-                <div className="d-flex mt-4 mb-auto">
-                  <img
-                    className="rounded-circle me-2 "
-                    src={suggestion.profilePic}
-                    alt=""
-                  />
-                  <h6 className="font-size-small">{suggestion.username}</h6>
-                  <a className="text-primary ms-auto text-decoration-none cursor-pointer" onClick={()=>follow(suggestion.id,suggestion.username)}>follow</a>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div>no suggestions</div>
-        )}
+      )}
+
+      <div className="suggestion-header">
+        <small>Suggestions for you</small>
+        <b className="see-all">See all</b>
       </div>
+
+      {suggestions.length > 0 ? (
+        <div className="suggestion-list">
+          {suggestions.map((suggestion) => (
+            <div key={suggestion.id} className="suggestion-item">
+              <img
+                className="suggestion-pic"
+                src={suggestion.profilePic}
+                alt={suggestion.username}
+              />
+              <h6 className="suggestion-name">{suggestion.username}</h6>
+              <button
+                className="follow-btn"
+                onClick={() => follow(suggestion.id, suggestion.username)}
+              >
+                Follow
+              </button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div>no suggestions</div>
+      )}
     </div>
   );
 };

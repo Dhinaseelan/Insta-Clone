@@ -71,7 +71,7 @@
   "profile": [
     {
       "id": "1",
-      "username": "english",
+      "username": "kathir",
       "profilePic": "src/assets/images/profle1.png"
     }
   ],
@@ -171,5 +171,18 @@
       "createdAt": "2026-02-25T16:45:00Z"
     }
   ],
-  "followers": []
+  "followers": [
+    {
+      "id": "5",
+      "username": "english_selvan"
+    },
+    {
+      "id": "4",
+      "username": "english_selvan"
+    },
+    {
+      "id": "3",
+      "username": "english_selvan"
+    }
+  ]
 }

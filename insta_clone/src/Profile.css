@@ -1,0 +1,274 @@
+:root{
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #0d6efd;
+  --surface: #f8fafc;
+  --card-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  --radius: 12px;
+  --gap: 12px;
+  --max-width: 980px;
+}
+
+.profile-root{
+  box-sizing: border-box;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+  background: transparent;
+}
+
+.profile-card{
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--card-shadow);
+  display: grid;
+  gap: var(--gap);
+}
+
+.profile-top{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.profile-avatar{
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eef2f7;
+  flex-shrink: 0;
+}
+
+.profile-avatar.fallback{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: linear-gradient(180deg,#f3f4f6,#e9ecef);
+  color: #111827;
+  font-weight: 700;
+  font-size: 20px;
+  border: 2px solid #eef2f7;
+  flex-shrink: 0;
+}
+
+.profile-meta{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.profile-username{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-stats{
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  align-items: center;
+}
+
+.profile-form{
+  display: grid;
+  gap: 10px;
+}
+
+.form-label{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #111827;
+}
+
+.form-input{
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e9ee;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow .12s, border-color .12s;
+}
+
+.form-input:focus{
+  border-color: rgba(13,110,253,0.18);
+  box-shadow: 0 6px 18px rgba(13,110,253,0.06);
+}
+
+.form-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn[disabled],
+.btn[aria-disabled="true"]{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-outline{
+  background: transparent;
+  border: 1px solid #e6e9ee;
+  color: #0f172a;
+}
+
+.form-error{
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.divider{
+  border: none;
+  border-top: 1px solid rgba(15,23,42,0.06);
+  margin: 12px 0;
+}
+
+.followers-section{
+  margin-top: 8px;
+}
+
+.followers-header{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.followers-list{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.follower-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.follower-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.follower-avatar.fallback-small{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e9eef6;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.follower-name{
+  font-size: 14px;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.follower-actions .btn-outline{
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.loading,
+.no-followers{
+  color: var(--muted);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+@media (min-width: 700px){
+  .followers-list{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-top{
+    gap: 18px;
+  }
+
+  .profile-avatar, .profile-avatar.fallback{
+    width: 96px;
+    height: 96px;
+  }
+
+  .profile-username{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1000px){
+  .profile-root{
+    padding: 20px;
+  }
+
+  .followers-list{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .profile-card{
+    padding: 18px;
+  }
+
+  .profile-avatar, .profile-avatar.fallback{
+    width: 112px;
+    height: 112px;
+  }
+
+  .profile-username{
+    font-size: 22px;
+  }
+}
+
+.text-muted{
+  color: var(--muted);
+  font-size: 13px;
+}

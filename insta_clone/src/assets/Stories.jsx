@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./Stories.css"; 
 
 const Stories = () => {
   const [stories, setStories] = useState([]);
@@ -12,28 +13,20 @@ const Stories = () => {
   }, []);
 
   return (
-    <div className="d-flex mt-3">
+    <div className="stories-container">
       {stories.length > 0 ? (
         stories.map((story) => (
-          <div className="mx-1" key={story.id}>
-             
+          <div className="story-item" key={story.id}>
             <Link to={`/story/${story.id}/${stories.length}`}>
               <div className="gradient-border">
                 <img
-                  className="rounded-circle story-db"
+                  className="story-pic"
                   src={story.user.profilePic}
-                  alt="dp"
+                  alt={story.user.username}
                 />
               </div>
             </Link>
-
-            
-            <p
-              className="text-truncate"
-              style={{ width: "50px" }}
-            >
-              {story.user.username}
-            </p>
+            <p className="story-username">{story.user.username}</p>
           </div>
         ))
       ) : (
