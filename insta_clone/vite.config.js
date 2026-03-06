@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  base: '/Insta-Clone/',   // 👈 this tells Vite the site is served from /Insta-Clone/
+  // you can keep other options here if you already have them
 })
